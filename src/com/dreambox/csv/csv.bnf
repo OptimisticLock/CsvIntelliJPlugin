@@ -1,6 +1,6 @@
 {
   tokens=[
-    eol="regexp:(\R)"
+    eol="regexp:(\R|([\n\r]*))"
     eof='<<EOF>>'
     literal="regexp:[^,\n'\"][^,\n]*"
     string="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"

@@ -52,9 +52,9 @@ public class _CsvLexer implements FlexLexer {
 
   /* The ZZ_CMAP_A table has 640 entries */
   static final char ZZ_CMAP_A[] = zzUnpackCMap(
-    "\11\0\1\4\1\2\2\1\1\3\22\0\1\4\1\0\1\5\4\0\1\7\4\0\1\6\17\0\1\11\1\0\1\15"+
-    "\6\0\1\12\1\14\10\0\1\13\14\0\1\10\50\0\1\1\32\0\1\4\337\0\1\4\177\0\13\4"+
-    "\35\0\2\1\5\0\1\4\57\0\1\4\40\0");
+    "\11\0\1\1\1\3\2\2\1\4\22\0\1\1\1\0\1\5\4\0\1\7\4\0\1\6\17\0\1\11\1\0\1\15"+
+    "\6\0\1\12\1\14\10\0\1\13\14\0\1\10\50\0\1\2\32\0\1\1\337\0\1\1\177\0\13\1"+
+    "\35\0\2\2\5\0\1\1\57\0\1\1\40\0");
 
   /** 
    * Translates DFA states to action switch labels.
@@ -62,11 +62,11 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\3\2\1\3\1\4\1\3\1\1\1\5"+
-    "\1\0\1\6\3\0\5\1\1\7";
+    "\1\1\1\2\3\3\1\4\1\5\1\4\1\2\2\1"+
+    "\1\0\1\6\3\0\5\2\1\7";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[21];
+    int [] result = new int[22];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -91,12 +91,12 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\16\0\16\0\34\0\52\0\70\0\34\0\106"+
-    "\0\124\0\34\0\70\0\34\0\142\0\106\0\160\0\176"+
-    "\0\214\0\232\0\250\0\266\0\16";
+    "\0\0\0\16\0\16\0\34\0\52\0\70\0\106\0\124"+
+    "\0\142\0\34\0\52\0\70\0\106\0\160\0\124\0\176"+
+    "\0\214\0\232\0\250\0\266\0\304\0\16";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[21];
+    int [] result = new int[22];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -119,19 +119,19 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\3\1\6\1\7\1\10"+
-    "\1\2\1\11\6\2\1\0\3\2\1\0\7\2\16\0"+
-    "\2\2\1\12\3\2\1\0\7\2\5\13\1\14\2\13"+
-    "\1\15\5\13\7\16\1\14\1\17\5\16\2\2\1\0"+
-    "\3\2\1\0\2\2\1\20\4\2\1\13\3\0\12\13"+
-    "\1\16\3\0\12\16\2\2\1\0\3\2\1\0\3\2"+
-    "\1\21\5\2\1\0\3\2\1\0\4\2\1\22\4\2"+
-    "\1\0\3\2\1\0\5\2\1\23\3\2\1\0\3\2"+
-    "\1\0\6\2\1\24\2\2\1\0\3\2\1\0\6\2"+
-    "\1\25";
+    "\1\2\2\3\1\4\1\5\1\6\1\7\1\10\1\2"+
+    "\1\11\7\2\1\0\2\2\1\0\7\2\3\0\2\12"+
+    "\11\0\3\2\1\12\1\13\1\2\1\0\7\2\5\14"+
+    "\1\15\2\14\1\16\5\14\16\0\7\17\1\15\1\20"+
+    "\5\17\3\2\1\0\2\2\1\0\2\2\1\21\4\2"+
+    "\2\14\3\0\11\14\2\17\3\0\11\17\3\2\1\0"+
+    "\2\2\1\0\3\2\1\22\6\2\1\0\2\2\1\0"+
+    "\4\2\1\23\5\2\1\0\2\2\1\0\5\2\1\24"+
+    "\4\2\1\0\2\2\1\0\6\2\1\25\3\2\1\0"+
+    "\2\2\1\0\6\2\1\26";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[196];
+    int [] result = new int[210];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -169,11 +169,10 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\1\1\11\2\1\1\11\2\1\1\11\1\0"+
-    "\1\11\3\0\6\1";
+    "\6\1\1\11\4\1\1\0\1\11\3\0\6\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[21];
+    int [] result = new int[22];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -479,23 +478,23 @@ public class _CsvLexer implements FlexLexer {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
-            { return LITERAL;
+            { return EOL;
             }
           case 8: break;
           case 2: 
-            { return com.intellij.psi.TokenType.WHITE_SPACE;
+            { return LITERAL;
             }
           case 9: break;
           case 3: 
-            { return com.intellij.psi.TokenType.BAD_CHARACTER;
+            { return com.intellij.psi.TokenType.WHITE_SPACE;
             }
           case 10: break;
           case 4: 
-            { return COMMA;
+            { return com.intellij.psi.TokenType.BAD_CHARACTER;
             }
           case 11: break;
           case 5: 
-            { return EOL;
+            { return COMMA;
             }
           case 12: break;
           case 6: 
