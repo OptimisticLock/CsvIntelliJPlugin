@@ -1,0 +1,45 @@
+<idea-plugin version="2">
+    <id>com.dreambox.csv</id>
+    <name>CSV Plugin</name>
+    <version>0.1</version>
+    <vendor email="support@dreambox.com" url="http://dreambox.com">DreamBox Learning</vendor>
+
+    <description><![CDATA[
+      CSV plugin. IJPlugin will eventually depend on this one<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      0.1. The first <em>"real"</em> version.<br>
+    ]]>
+    </change-notes>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="163.7743"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileTypeFactory implementation="com.dreambox.csv.CsvFileTypeFactory"/>
+        <lang.parserDefinition language="csv" implementationClass="com.dreambox.csv.CsvParserDefinition"/>
+    </extensions>
+
+    <!-- Add your actions here -->
+
+    <actions>
+        <group id="Csv.CsvMenu" text="_CSV" description="CSV">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Csv.CsvAction"
+                    class="com.dreambox.csv.CsvAction"
+                    text="CSV Action222 "
+                    description="CSV Action Description goes here222">
+            </action>
+        </group>
+    </actions>
+
+</idea-plugin>

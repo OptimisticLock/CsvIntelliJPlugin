@@ -1,0 +1,15 @@
+{
+  tokens=[
+    eol="regexp:(\R)"
+    eof='<<EOF>>'
+    literal="regexp:[^,\n'\"][^,\n]*"
+    string="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
+    comma=','
+  ]
+
+}
+
+root ::= line *
+line ::=  !<<eof>> value (comma value)* ( eol | <<eof>>)
+value ::= (string | literal)?
+
