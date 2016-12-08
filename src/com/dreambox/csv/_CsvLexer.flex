@@ -19,9 +19,10 @@ import static generated.GeneratedTypes.*;
 %type IElementType
 %unicode
 
+EOL=\R
 WHITE_SPACE=\s
 
-EOL=(\R|([\n\r]*))
+EOL=[\n\r]+
 LITERAL=[^,\n'\"][^,\n]*
 STRING=('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")
 
