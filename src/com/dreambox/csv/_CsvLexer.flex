@@ -19,8 +19,6 @@ import static generated.GeneratedTypes.*;
 %type IElementType
 %unicode
 
-EOL=\R
-WHITE_SPACE=\s
 
 EOL=[\n\r]+
 LITERAL=[^,\n'\"][^,\n]*
