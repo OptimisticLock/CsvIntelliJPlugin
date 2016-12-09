@@ -20,13 +20,13 @@ import static generated.GeneratedTypes.*;
 %unicode
 
 
-EOL=[\n\r]+
-LITERAL=[^,\n'\"][^,\n]*
+EOL=[\r\n]+
+LITERAL=[^,\r\n'\"][^,\r\n]*
 STRING=('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")
 
 %%
 <YYINITIAL> {
-  {WHITE_SPACE}      { return com.intellij.psi.TokenType.WHITE_SPACE; }
+ // {WHITE_SPACE}      { return com.intellij.psi.TokenType.WHITE_SPACE; }
 
   "<<EOF>>"          { return EOF; }
   ","                { return COMMA; }
