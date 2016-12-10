@@ -1,5 +1,5 @@
 {
- // elementTypeClass="com.dreambox.csv.CsvElementType";
+  elementTypeClass="com.dreambox.csv.CsvElementType";
 
   tokens=[
     eol="regexp:[\r\n]+"

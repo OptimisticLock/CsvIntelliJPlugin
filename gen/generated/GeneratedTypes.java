@@ -4,12 +4,13 @@ package generated;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.PsiElement;
 import com.intellij.lang.ASTNode;
+import com.dreambox.csv.CsvElementType;
 import generated.psi.impl.*;
 
 public interface GeneratedTypes {
 
-  IElementType CSV_LINE = new IElementType("CSV_LINE", null);
-  IElementType VALUE = new IElementType("VALUE", null);
+  IElementType CSV_LINE = new CsvElementType("CSV_LINE");
+  IElementType VALUE = new CsvElementType("VALUE");
 
   IElementType COMMA = new IElementType(",", null);
   IElementType EOF = new IElementType("<<EOF>>", null);
