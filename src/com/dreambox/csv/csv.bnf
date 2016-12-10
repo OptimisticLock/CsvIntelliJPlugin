@@ -1,4 +1,6 @@
 {
+ // elementTypeClass="com.dreambox.csv.CsvElementType";
+
   tokens=[
     eol="regexp:[\r\n]+"
     eof='<<EOF>>'
@@ -6,6 +8,7 @@
     string="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
     comma=','
   ]
+
 
 }
 
