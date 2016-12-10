@@ -10,13 +10,13 @@ import generated.psi.impl.*;
 public interface GeneratedTypes {
 
   IElementType CSV_LINE = new CsvElementType("CSV_LINE");
-  IElementType VALUE = new CsvElementType("VALUE");
+  IElementType CSV_VALUE = new CsvElementType("CSV_VALUE");
 
-  IElementType COMMA = new IElementType(",", null);
-  IElementType EOF = new IElementType("<<EOF>>", null);
-  IElementType EOL = new IElementType("eol", null);
-  IElementType LITERAL = new IElementType("literal", null);
-  IElementType STRING = new IElementType("string", null);
+  IElementType CSVCOMMA = new IElementType(",", null);
+  IElementType CSVEOF = new IElementType("<<EOF>>", null);
+  IElementType CSVEOL = new IElementType("csvEol", null);
+  IElementType CSVLITERAL = new IElementType("csvLiteral", null);
+  IElementType CSVSTRING = new IElementType("csvString", null);
 
   class Factory {
     public static PsiElement createElement(ASTNode node) {
@@ -24,8 +24,8 @@ public interface GeneratedTypes {
        if (type == CSV_LINE) {
         return new CsvLineImpl(node);
       }
-      else if (type == VALUE) {
-        return new ValueImpl(node);
+      else if (type == CSV_VALUE) {
+        return new CsvValueImpl(node);
       }
       throw new AssertionError("Unknown element type: " + type);
     }

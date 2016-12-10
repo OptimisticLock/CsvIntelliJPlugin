@@ -8,9 +8,9 @@ import com.intellij.psi.PsiElement;
 public interface CsvLine extends PsiElement {
 
   @NotNull
-  List<Value> getValueList();
+  List<CsvValue> getCsvValueList();
 
   @Nullable
-  PsiElement getEol();
+  PsiElement getCsvEol();
 
 }

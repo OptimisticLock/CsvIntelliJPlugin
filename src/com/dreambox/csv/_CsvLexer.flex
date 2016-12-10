@@ -19,19 +19,20 @@ import static generated.GeneratedTypes.*;
 %type IElementType
 %unicode
 
-EOL=[\r\n]+
-LITERAL=[^,\r\n'\"][^,\r\n]*
-STRING=('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")
+CSVEOL=[\r\n]+
+CSVLITERAL=[^,\r\n'\"][^,\r\n]*
+CSVSTRING=('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")
 
 %%
 <YYINITIAL> {
+  {WHITE_SPACE}      { return com.intellij.psi.TokenType.WHITE_SPACE; }
 
-  "<<EOF>>"          { return EOF; }
-  ","                { return COMMA; }
+  "<<EOF>>"          { return CSVEOF; }
+  ","                { return CSVCOMMA; }
 
-  {EOL}              { return EOL; }
-  {LITERAL}          { return LITERAL; }
-  {STRING}           { return STRING; }
+  {CSVEOL}           { return CSVEOL; }
+  {CSVLITERAL}       { return CSVLITERAL; }
+  {CSVSTRING}        { return CSVSTRING; }
 
 }
 

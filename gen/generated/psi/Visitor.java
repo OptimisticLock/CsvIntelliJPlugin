@@ -11,7 +11,7 @@ public class Visitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
-  public void visitValue(@NotNull Value o) {
+  public void visitCsvValue(@NotNull CsvValue o) {
     visitPsiElement(o);
   }
 

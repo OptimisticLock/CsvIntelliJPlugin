@@ -5,12 +5,12 @@ import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 
-public interface Value extends PsiElement {
+public interface CsvValue extends PsiElement {
 
   @Nullable
-  PsiElement getLiteral();
+  PsiElement getCsvLiteral();
 
   @Nullable
-  PsiElement getString();
+  PsiElement getCsvString();
 
 }

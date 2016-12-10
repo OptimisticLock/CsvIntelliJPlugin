@@ -11,14 +11,14 @@ import static generated.GeneratedTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import generated.psi.*;
 
-public class ValueImpl extends ASTWrapperPsiElement implements Value {
+public class CsvValueImpl extends ASTWrapperPsiElement implements CsvValue {
 
-  public ValueImpl(ASTNode node) {
+  public CsvValueImpl(ASTNode node) {
     super(node);
   }
 
   public void accept(@NotNull Visitor visitor) {
-    visitor.visitValue(this);
+    visitor.visitCsvValue(this);
   }
 
   public void accept(@NotNull PsiElementVisitor visitor) {
@@ -28,14 +28,14 @@ public class ValueImpl extends ASTWrapperPsiElement implements Value {
 
   @Override
   @Nullable
-  public PsiElement getLiteral() {
-    return findChildByType(LITERAL);
+  public PsiElement getCsvLiteral() {
+    return findChildByType(CSVLITERAL);
   }
 
   @Override
   @Nullable
-  public PsiElement getString() {
-    return findChildByType(STRING);
+  public PsiElement getCsvString() {
+    return findChildByType(CSVSTRING);
   }
 
 }

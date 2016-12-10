@@ -35,25 +35,26 @@ public class _CsvLexer implements FlexLexer {
 
   /** 
    * Translates characters to character classes
-   * Chosen bits are [9, 6, 6]
-   * Total runtime size is 1568 bytes
+   * Chosen bits are [7, 7, 7]
+   * Total runtime size is 1928 bytes
    */
   public static int ZZ_CMAP(int ch) {
-    return ZZ_CMAP_A[(ZZ_CMAP_Y[ZZ_CMAP_Z[ch>>12]|((ch>>6)&0x3f)]<<6)|(ch&0x3f)];
+    return ZZ_CMAP_A[(ZZ_CMAP_Y[ZZ_CMAP_Z[ch>>14]|((ch>>7)&0x7f)]<<7)|(ch&0x7f)];
   }
 
-  /* The ZZ_CMAP_Z table has 272 entries */
+  /* The ZZ_CMAP_Z table has 68 entries */
   static final char ZZ_CMAP_Z[] = zzUnpackCMap(
-    "\1\0\1\100\1\200\u010d\100");
+    "\1\0\103\200");
 
-  /* The ZZ_CMAP_Y table has 192 entries */
+  /* The ZZ_CMAP_Y table has 256 entries */
   static final char ZZ_CMAP_Y[] = zzUnpackCMap(
-    "\1\0\1\1\1\2\175\3\1\4\77\3");
+    "\1\0\1\1\53\2\1\3\22\2\1\4\37\2\1\3\237\2");
 
-  /* The ZZ_CMAP_A table has 320 entries */
+  /* The ZZ_CMAP_A table has 640 entries */
   static final char ZZ_CMAP_A[] = zzUnpackCMap(
-    "\12\0\1\1\2\6\1\1\24\0\1\2\4\0\1\4\4\0\1\3\17\0\1\7\1\0\1\13\6\0\1\10\1\12"+
-    "\10\0\1\11\14\0\1\5\50\0\1\6\242\0\2\6\26\0");
+    "\11\0\1\3\1\2\2\1\1\2\22\0\1\3\1\0\1\4\4\0\1\6\4\0\1\5\17\0\1\10\1\0\1\14"+
+    "\6\0\1\11\1\13\10\0\1\12\14\0\1\7\50\0\1\1\32\0\1\3\337\0\1\3\177\0\13\3\35"+
+    "\0\2\1\5\0\1\3\57\0\1\3\40\0");
 
   /** 
    * Translates DFA states to action switch labels.
@@ -61,11 +62,11 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\1\3\1\1\1\0"+
-    "\1\5\3\0\5\1\1\6";
+    "\1\0\1\1\2\2\1\3\1\4\1\3\1\1\1\5"+
+    "\1\0\1\6\3\0\5\1\1\7";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[18];
+    int [] result = new int[20];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -90,12 +91,12 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\14\0\30\0\44\0\60\0\74\0\110\0\44"+
-    "\0\60\0\124\0\74\0\140\0\154\0\170\0\204\0\220"+
-    "\0\234\0\14";
+    "\0\0\0\15\0\15\0\32\0\47\0\64\0\101\0\116"+
+    "\0\32\0\47\0\64\0\133\0\101\0\150\0\165\0\202"+
+    "\0\217\0\234\0\251\0\15";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[18];
+    int [] result = new int[20];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -118,18 +119,18 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\6\2\2\1\7\5\2"+
-    "\1\0\1\2\1\0\10\2\1\0\1\3\12\0\2\10"+
-    "\1\11\2\10\1\12\6\10\14\0\4\13\1\11\1\14"+
-    "\6\13\1\2\1\0\1\2\1\0\3\2\1\15\4\2"+
-    "\1\10\1\0\4\10\1\0\5\10\1\13\1\0\4\13"+
-    "\1\0\5\13\1\2\1\0\1\2\1\0\4\2\1\16"+
-    "\4\2\1\0\1\2\1\0\5\2\1\17\3\2\1\0"+
-    "\1\2\1\0\6\2\1\20\2\2\1\0\1\2\1\0"+
-    "\7\2\1\21\1\2\1\0\1\2\1\0\7\2\1\22";
+    "\1\2\1\3\1\4\1\3\1\5\1\6\1\7\1\2"+
+    "\1\10\6\2\1\0\2\2\1\0\7\2\2\0\1\11"+
+    "\12\0\4\12\1\13\2\12\1\14\5\12\15\0\6\15"+
+    "\1\13\1\16\5\15\2\2\1\0\2\2\1\0\2\2"+
+    "\1\17\4\2\1\12\2\0\12\12\1\15\2\0\12\15"+
+    "\2\2\1\0\2\2\1\0\3\2\1\20\5\2\1\0"+
+    "\2\2\1\0\4\2\1\21\4\2\1\0\2\2\1\0"+
+    "\5\2\1\22\3\2\1\0\2\2\1\0\6\2\1\23"+
+    "\2\2\1\0\2\2\1\0\6\2\1\24";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[168];
+    int [] result = new int[182];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -167,10 +168,10 @@ public class _CsvLexer implements FlexLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\3\1\1\11\2\1\1\0\1\11\3\0\6\1";
+    "\1\0\4\1\1\11\3\1\1\0\1\11\3\0\6\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[18];
+    int [] result = new int[20];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -476,29 +477,33 @@ public class _CsvLexer implements FlexLexer {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
-            { return LITERAL;
-            }
-          case 7: break;
-          case 2: 
-            { return EOL;
+            { return CSVLITERAL;
             }
           case 8: break;
+          case 2: 
+            { return com.intellij.psi.TokenType.WHITE_SPACE;
+            }
+          case 9: break;
           case 3: 
             { return com.intellij.psi.TokenType.BAD_CHARACTER;
             }
-          case 9: break;
-          case 4: 
-            { return COMMA;
-            }
           case 10: break;
-          case 5: 
-            { return STRING;
+          case 4: 
+            { return CSVCOMMA;
             }
           case 11: break;
-          case 6: 
-            { return EOF;
+          case 5: 
+            { return CSVEOL;
             }
           case 12: break;
+          case 6: 
+            { return CSVSTRING;
+            }
+          case 13: break;
+          case 7: 
+            { return CSVEOF;
+            }
+          case 14: break;
           default:
             zzScanError(ZZ_NO_MATCH);
           }

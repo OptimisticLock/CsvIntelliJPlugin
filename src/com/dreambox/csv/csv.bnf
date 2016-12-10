@@ -2,17 +2,17 @@
   elementTypeClass="com.dreambox.csv.CsvElementType";
 
   tokens=[
-    eol="regexp:[\r\n]+"
-    eof='<<EOF>>'
-    literal="regexp:[^,\r\n'\"][^,\r\n]*"
-    string="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
-    comma=','
+    csvEol="regexp:[\r\n]+"
+    csvEof='<<EOF>>'
+    csvLiteral="regexp:[^,\r\n'\"][^,\r\n]*"
+    csvString="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
+    csvComma=','
   ]
 
 
 }
 
 root ::= csvLine *
-csvLine ::=  !<<eof>> value (comma value)* ( eol | <<eof>>)
-value ::= (string | literal)?
+csvLine ::=  !<<eof>> csvValue (csvComma csvValue)* ( csvEol | <<eof>>)
+csvValue ::= (csvString | csvLiteral)?
 

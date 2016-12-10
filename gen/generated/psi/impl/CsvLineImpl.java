@@ -28,14 +28,14 @@ public class CsvLineImpl extends ASTWrapperPsiElement implements CsvLine {
 
   @Override
   @NotNull
-  public List<Value> getValueList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, Value.class);
+  public List<CsvValue> getCsvValueList() {
+    return PsiTreeUtil.getChildrenOfTypeAsList(this, CsvValue.class);
   }
 
   @Override
   @Nullable
-  public PsiElement getEol() {
-    return findChildByType(EOL);
+  public PsiElement getCsvEol() {
+    return findChildByType(CSVEOL);
   }
 
 }
