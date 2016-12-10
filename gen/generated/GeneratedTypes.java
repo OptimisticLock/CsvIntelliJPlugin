@@ -8,7 +8,7 @@ import generated.psi.impl.*;
 
 public interface GeneratedTypes {
 
-  IElementType LINE = new IElementType("LINE", null);
+  IElementType CSV_LINE = new IElementType("CSV_LINE", null);
   IElementType VALUE = new IElementType("VALUE", null);
 
   IElementType COMMA = new IElementType(",", null);
@@ -20,8 +20,8 @@ public interface GeneratedTypes {
   class Factory {
     public static PsiElement createElement(ASTNode node) {
       IElementType type = node.getElementType();
-       if (type == LINE) {
-        return new LineImpl(node);
+       if (type == CSV_LINE) {
+        return new CsvLineImpl(node);
       }
       else if (type == VALUE) {
         return new ValueImpl(node);

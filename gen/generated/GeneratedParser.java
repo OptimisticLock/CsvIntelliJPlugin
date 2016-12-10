@@ -23,8 +23,8 @@ public class GeneratedParser implements PsiParser, LightPsiParser {
     boolean r;
     b = adapt_builder_(t, b, this, null);
     Marker m = enter_section_(b, 0, _COLLAPSE_, null);
-    if (t == LINE) {
-      r = line(b, 0);
+    if (t == CSV_LINE) {
+      r = csvLine(b, 0);
     }
     else if (t == VALUE) {
       r = value(b, 0);
@@ -41,21 +41,21 @@ public class GeneratedParser implements PsiParser, LightPsiParser {
 
   /* ********************************************************** */
   // !<<eof>> value (comma value)* ( eol | <<eof>>)
-  public static boolean line(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "line")) return false;
+  public static boolean csvLine(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "csvLine")) return false;
     boolean r;
-    Marker m = enter_section_(b, l, _NONE_, LINE, "<line>");
-    r = line_0(b, l + 1);
+    Marker m = enter_section_(b, l, _NONE_, CSV_LINE, "<csv line>");
+    r = csvLine_0(b, l + 1);
     r = r && value(b, l + 1);
-    r = r && line_2(b, l + 1);
-    r = r && line_3(b, l + 1);
+    r = r && csvLine_2(b, l + 1);
+    r = r && csvLine_3(b, l + 1);
     exit_section_(b, l, m, r, false, null);
     return r;
   }
 
   // !<<eof>>
-  private static boolean line_0(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "line_0")) return false;
+  private static boolean csvLine_0(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "csvLine_0")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NOT_);
     r = !eof(b, l + 1);
@@ -64,20 +64,20 @@ public class GeneratedParser implements PsiParser, LightPsiParser {
   }
 
   // (comma value)*
-  private static boolean line_2(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "line_2")) return false;
+  private static boolean csvLine_2(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "csvLine_2")) return false;
     int c = current_position_(b);
     while (true) {
-      if (!line_2_0(b, l + 1)) break;
-      if (!empty_element_parsed_guard_(b, "line_2", c)) break;
+      if (!csvLine_2_0(b, l + 1)) break;
+      if (!empty_element_parsed_guard_(b, "csvLine_2", c)) break;
       c = current_position_(b);
     }
     return true;
   }
 
   // comma value
-  private static boolean line_2_0(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "line_2_0")) return false;
+  private static boolean csvLine_2_0(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "csvLine_2_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = consumeToken(b, COMMA);
@@ -87,8 +87,8 @@ public class GeneratedParser implements PsiParser, LightPsiParser {
   }
 
   // eol | <<eof>>
-  private static boolean line_3(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "line_3")) return false;
+  private static boolean csvLine_3(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "csvLine_3")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = consumeToken(b, EOL);
@@ -98,12 +98,12 @@ public class GeneratedParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // line *
+  // csvLine *
   static boolean root(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "root")) return false;
     int c = current_position_(b);
     while (true) {
-      if (!line(b, l + 1)) break;
+      if (!csvLine(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "root", c)) break;
       c = current_position_(b);
     }

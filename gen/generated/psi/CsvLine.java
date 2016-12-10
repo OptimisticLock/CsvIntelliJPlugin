@@ -5,7 +5,7 @@ import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 
-public interface Line extends PsiElement {
+public interface CsvLine extends PsiElement {
 
   @NotNull
   List<Value> getValueList();

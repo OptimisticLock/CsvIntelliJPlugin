@@ -7,7 +7,7 @@ import com.intellij.psi.PsiElement;
 
 public class Visitor extends PsiElementVisitor {
 
-  public void visitLine(@NotNull Line o) {
+  public void visitCsvLine(@NotNull CsvLine o) {
     visitPsiElement(o);
   }
 

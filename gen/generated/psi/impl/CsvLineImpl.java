@@ -11,14 +11,14 @@ import static generated.GeneratedTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import generated.psi.*;
 
-public class LineImpl extends ASTWrapperPsiElement implements Line {
+public class CsvLineImpl extends ASTWrapperPsiElement implements CsvLine {
 
-  public LineImpl(ASTNode node) {
+  public CsvLineImpl(ASTNode node) {
     super(node);
   }
 
   public void accept(@NotNull Visitor visitor) {
-    visitor.visitLine(this);
+    visitor.visitCsvLine(this);
   }
 
   public void accept(@NotNull PsiElementVisitor visitor) {

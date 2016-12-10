@@ -1,15 +1,15 @@
 {
   tokens=[
-    eol="regexp:[\n\r]+"
+    eol="regexp:[\r\n]+"
     eof='<<EOF>>'
-    literal="regexp:[^,\n'\"][^,\n]*"
+    literal="regexp:[^,\r\n'\"][^,\r\n]*"
     string="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
     comma=','
   ]
 
 }
 
-root ::= line *
-line ::=  !<<eof>> value (comma value)* ( eol | <<eof>>)
+root ::= csvLine *
+csvLine ::=  !<<eof>> value (comma value)* ( eol | <<eof>>)
 value ::= (string | literal)?
 
