@@ -27,6 +27,10 @@
         <!-- Add your extensions here -->
         <fileTypeFactory implementation="com.dreambox.csv.CsvFileTypeFactory"/>
         <lang.parserDefinition language="csv" implementationClass="com.dreambox.csv.CsvParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="csv"
+                                       implementationClass="com.dreambox.csv.CsvSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="com.dreambox.csv.CsvColorSettingsPage"/>
+        <highlightVisitor implementation="com.dreambox.csv.CsvHighlightVisitor"/>
     </extensions>
 
     <!-- Add your actions here -->
