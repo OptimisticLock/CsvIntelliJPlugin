@@ -26,7 +26,6 @@ STRING=('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")
 
 %%
 <YYINITIAL> {
-  {WHITE_SPACE}      { return com.intellij.psi.TokenType.WHITE_SPACE; }
 
   "<<EOF>>"          { return EOF; }
   ","                { return COMMA; }

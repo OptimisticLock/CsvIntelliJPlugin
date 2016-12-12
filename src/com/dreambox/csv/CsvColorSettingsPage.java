@@ -14,9 +14,12 @@ import java.util.Map;
 public class CsvColorSettingsPage implements ColorSettingsPage {
 
 	private static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{
-			new AttributesDescriptor("Comma", CsvSyntaxHighlighter.COMMA),
 			new AttributesDescriptor("Literal", CsvSyntaxHighlighter.LITERAL),
-			new AttributesDescriptor("String", CsvSyntaxHighlighter.STRING)
+			new AttributesDescriptor("Literal2", CsvSyntaxHighlighter.LITERAL2),
+			new AttributesDescriptor("Comma", CsvSyntaxHighlighter.COMMA),
+			new AttributesDescriptor("Line", CsvSyntaxHighlighter.LINE),
+			new AttributesDescriptor("String", CsvSyntaxHighlighter.STRING),
+			new AttributesDescriptor("EOL", CsvSyntaxHighlighter.EOL)
 	};
 
 	@Nullable
