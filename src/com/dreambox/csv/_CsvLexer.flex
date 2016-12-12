@@ -19,12 +19,14 @@ import static generated.GeneratedTypes.*;
 %type IElementType
 %unicode
 
+
 EOL=[\r\n]+
 LITERAL=[^,\r\n'\"][^,\r\n]*
 STRING=('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")
 
 %%
 <YYINITIAL> {
+  {WHITE_SPACE}      { return com.intellij.psi.TokenType.WHITE_SPACE; }
 
   "<<EOF>>"          { return EOF; }
   ","                { return COMMA; }
