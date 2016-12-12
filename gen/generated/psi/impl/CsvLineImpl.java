@@ -8,10 +8,10 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
 import com.intellij.psi.util.PsiTreeUtil;
 import static generated.GeneratedTypes.*;
-import com.intellij.extapi.psi.ASTWrapperPsiElement;
+import com.dreambox.csv.elements.MyCsvLine;
 import generated.psi.*;
 
-public class CsvLineImpl extends ASTWrapperPsiElement implements CsvLine {
+public class CsvLineImpl extends MyCsvLine implements CsvLine {
 
   public CsvLineImpl(ASTNode node) {
     super(node);

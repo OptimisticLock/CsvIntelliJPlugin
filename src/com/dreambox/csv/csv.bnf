@@ -13,6 +13,6 @@
 }
 
 root ::= csvLine *
-csvLine ::=  !<<eof>> value (comma value)* ( eol | <<eof>>)
+csvLine ::=  !<<eof>> value (comma value)* ( eol | <<eof>>)  {mixin="com.dreambox.csv.elements.MyCsvLine"}
 value ::= (string | literal)?
 
