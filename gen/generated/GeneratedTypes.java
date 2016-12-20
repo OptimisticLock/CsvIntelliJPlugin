@@ -17,6 +17,7 @@ public interface GeneratedTypes {
   IElementType EOL = new IElementType("eol", null);
   IElementType LITERAL = new IElementType("literal", null);
   IElementType STRING = new IElementType("string", null);
+  IElementType TOKENTYPECLASS = new IElementType("com.dreambox.csv.CsvTokenType", null);
 
   class Factory {
     public static PsiElement createElement(ASTNode node) {

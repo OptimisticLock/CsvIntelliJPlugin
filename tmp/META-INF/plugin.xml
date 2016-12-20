@@ -9,8 +9,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      0.0.2. With highlighting and some intelligence in MyCsvLine <br>
-      0.0.1. The first <em>"real"</em> version.<br>
+      0.1. The first <em>"real"</em> version.<br>
     ]]>
     </change-notes>
 
@@ -28,10 +27,6 @@
         <!-- Add your extensions here -->
         <fileTypeFactory implementation="com.dreambox.csv.CsvFileTypeFactory"/>
         <lang.parserDefinition language="csv" implementationClass="com.dreambox.csv.CsvParserDefinition"/>
-        <lang.syntaxHighlighterFactory language="csv"
-                                       implementationClass="com.dreambox.csv.CsvSyntaxHighlighterFactory"/>
-        <colorSettingsPage implementation="com.dreambox.csv.CsvColorSettingsPage"/>
-        <highlightVisitor implementation="com.dreambox.csv.CsvHighlightVisitor"/>
     </extensions>
 
     <!-- Add your actions here -->

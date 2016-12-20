@@ -30,6 +30,8 @@ public class CsvHighlightVisitor extends RainbowVisitor {
 
     @Override
     public void visit(@NotNull PsiElement psiElement) {
+
+
         //    System.out.println("Visited " + psiElement);
         HighlightInfo attrs = getRainbowSymbolKey(psiElement);
         addInfo(attrs);
@@ -37,7 +39,7 @@ public class CsvHighlightVisitor extends RainbowVisitor {
 
     @NotNull
     @Override
-    public HighlightVisitor clone() {
+    public CsvHighlightVisitor clone() {
         return new CsvHighlightVisitor();
     }
 

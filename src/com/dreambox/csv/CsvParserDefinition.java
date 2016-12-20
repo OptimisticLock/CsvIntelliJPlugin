@@ -18,8 +18,10 @@ import org.jetbrains.annotations.NotNull;
 import java.io.Reader;
 
 public class CsvParserDefinition implements ParserDefinition{
-  //  public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
-  //  public static final TokenSet COMMENTS = TokenSet.create(MyConstants.MY_COMMENT33);
+
+    // Load class in order to register it in the list of available languages. A hack.
+    private static CsvLanguage language = CsvLanguage.INSTANCE;
+
     public static final IFileElementType FILE = new IFileElementType(Language.<CsvLanguage>findInstance(CsvLanguage.class));
 
     @NotNull

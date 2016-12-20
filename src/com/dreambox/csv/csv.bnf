@@ -7,6 +7,7 @@
     literal="regexp:[^,\r\n'\"][^,\r\n]*"
     string="regexp:('([^'\\]|\\.)*'|\"([^\"\\]|\\.)*\")"
     comma=','
+    tokenTypeClass="com.dreambox.csv.CsvTokenType"
   ]
 
 
